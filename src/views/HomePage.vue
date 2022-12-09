@@ -1,11 +1,13 @@
 <script setup>
-  import { ref } from "vue" ; 
 </script>
 
 <template>
   <div>
-    <h1>hi</h1>
+    <SiteHeader/>
+    <SiteHero/>
+    <SiteFooter/>
   </div>
+  <p>help</p>
 </template>
 
 <style>
