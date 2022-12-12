@@ -3,6 +3,7 @@
 
 <template>
   <div>
+    <RouterView/>
     <SiteHeader/>
     <SiteHero/>
     <SiteFooter/>

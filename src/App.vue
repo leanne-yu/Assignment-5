@@ -1,12 +1,16 @@
 <script setup>
-import HomePage from './views/HomePage.vue';
+import SiteHeaderVue from './components/SiteHeader.vue';
+import SiteHeroVue from './components/SiteHero.vue';
+import SiteFooterVue from './components/SiteFooter.vue';
 
 </script>
 
 <template>
   <div>
     <RouterView/>
-    <HomePage/>
+    <SiteHeaderVue/>
+    <SiteHeroVue/>
+    <SiteFooterVue/>
   </div>
 </template>
 

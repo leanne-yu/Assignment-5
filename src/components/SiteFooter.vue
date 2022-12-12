@@ -2,6 +2,7 @@
 </script>
 
 <template>
+    <p>sendhekp</p>
 </template>
 
 <style>
