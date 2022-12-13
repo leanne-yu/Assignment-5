@@ -1,4 +1,6 @@
 <script setup>
+import SiteHeaderVue from '../components/SiteHeader.vue';
+import SiteFooterVue from '../components/SiteFooter.vue';
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
@@ -15,8 +17,8 @@ const login = () => {
 </script>
 
 <template>
+  <SiteHeaderVue/>
   <div class="home-container">
-    <h1>Home</h1>
     <form @submit.prevent="login()">
       <input type="text" v-model="username" placeholder="Username" />
       <input type="password" v-model="password" placeholder="Password" />
@@ -26,4 +28,24 @@ const login = () => {
       <p>Incorrect username/password! Get out</p>
     </div>
   </div>
+  <SiteFooterVue/>
 </template>
+ 
+<style scoped>
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form input {
+    padding: 1%;
+  }
+  .home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  }
+  
+</style>

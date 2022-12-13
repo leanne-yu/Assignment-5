@@ -1,14 +1,14 @@
 <script setup>
+import SiteHeaderVue from '../components/SiteHeader.vue';
+import SiteHeroVue from '../components/SiteHero.vue';
+import SiteFooterVue from '../components/SiteFooter.vue';
 </script>
 
 <template>
-  <div>
-    <RouterView/>
-    <SiteHeader/>
-    <SiteHero/>
-    <SiteFooter/>
-  </div>
-  <p>help</p>
+  <RouterViewVue/>
+  <SiteHeaderVue/>
+  <SiteHeroVue/>
+  <SiteFooterVue/>
 </template>
 
 <style>

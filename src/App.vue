@@ -6,11 +6,9 @@ import SiteFooterVue from './components/SiteFooter.vue';
 </script>
 
 <template>
-  <div>
+  <div class="app-container">
     <RouterView/>
-    <SiteHeaderVue/>
-    <SiteHeroVue/>
-    <SiteFooterVue/>
+    
   </div>
 </template>
 
