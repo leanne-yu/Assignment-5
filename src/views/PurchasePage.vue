@@ -13,4 +13,6 @@ const openModal = (id) => {
 const closeModal = () => {
   showModal.value = false;
 };
+
+
 </script>
