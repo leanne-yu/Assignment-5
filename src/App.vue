@@ -7,8 +7,9 @@ import SiteFooterVue from './components/SiteFooter.vue';
 
 <template>
   <div class="app-container">
-    <RouterView/>
-    
+    <Suspense>
+      <RouterView/>
+    </Suspense>
   </div>
 </template>
 

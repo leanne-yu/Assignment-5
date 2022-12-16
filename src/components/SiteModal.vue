@@ -1,26 +1,17 @@
 <script setup>
-import { ref } from 'vue';
-import SiteModal from '../components/SiteModal.vue';
-
-const showModal = ref(false);
-const selectedId = ref(0);
-
-const openModal = (id) => {
-    showModal.value = true;
-    selectedId.value = id;
-};
-
-const closeModal = () => {
-    showModal.value = false;
-};
+const props = defineProps(["id"]);
+const emits = defineEmits(["toggleModal"]);
 </script>
- 
+
 <template>
-    <div>
-        <h1>Login</h1>
-        <button @click="openModal(5000)">Modal</button>
+  <Teleport to="body">
+    <div class="modal-outer-container" @click.self="emits('toggleModal')">
+      <div class="modal-inner-container">
+        <button class="close-button" @click="emits('toggleModal')">X</button>
+        <h1>{{ props.id }}</h1>
+      </div>
     </div>
-    <SiteModal v-if="showModal" @toggleModal="closeModal()" :id="selectedId" />
+  </Teleport>
 </template>
  
 <style scoped>
