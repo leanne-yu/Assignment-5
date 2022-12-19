@@ -31,7 +31,7 @@ console.log(data);
   <div class="purchase-container">
     <img v-for="movie in data" class="poster" :src="`https://image.tmdb.org/t/p/w500/${movie.poster_path}`" />
   </div>
-  <SiteModal v-if="showModal" @toggleModal="closeModal()" :id="selectedId" />
+<SiteModal v-if="showModal" @toggleModal="closeModal()" :id="selectedId" />
 
 </template>
 
