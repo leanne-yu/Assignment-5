@@ -30,9 +30,10 @@ body {
 }
 .title {
   color: rgb(141, 187, 141);
-  font-size: 40px;
+  font-size: 35px;
   margin-bottom: 0%;
   font-family: 'Fredoka One';
+  margin-top: 1%;
 }
 
 button {
@@ -45,5 +46,9 @@ button {
   font-family: 'Fredoka One';
   color: rgb(14, 58, 14);
   border: none;
+}
+
+.shrekHead{
+  padding: 0%;
 }
 </style>

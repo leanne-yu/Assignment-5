@@ -18,32 +18,67 @@ const login = () => {
 
 <template>
   <SiteHeaderVue />
-  <div class="home-container">
+  <h3>Swing into it. Login here!</h3>
+  <div class="login-container">
     <form @submit.prevent="login()">
       <input type="text" v-model="username" placeholder="Username" />
       <input type="password" v-model="password" placeholder="Password" />
+      <br />
       <input type="submit" value="Login" />
       <div v-if="error" class="error">
-        <p>Incorrect username/password! Get out</p>
+        <p>Incorrect username or password! Get out -> </p>
       </div>
     </form>
   </div>
-  <SiteFooterVue />
+  <img class="swinging"
+    src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d3789c8c-0874-407c-a457-03b147f59b18/deyfbg3-ceda02cf-d14e-4eca-aba3-b34f4fba7c5d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2QzNzg5YzhjLTA4NzQtNDA3Yy1hNDU3LTAzYjE0N2Y1OWIxOFwvZGV5ZmJnMy1jZWRhMDJjZi1kMTRlLTRlY2EtYWJhMy1iMzRmNGZiYTdjNWQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7wUXm2TkbzFh0BFd5u4Xhm3fiUd_QTfHqM0Sc-PsQ00"
+    width="300" height="400">
 </template>
 
 <style scoped>
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  form input {
-    padding: 1%;
-  }
-  .home-container {
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  }
-  </style>
+  width: 25vw;
+  padding-top: 0%;
+}
+
+form input {
+  padding: 0.5rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(134, 184, 134);
+}
+
+.login-container {
+  display: flex;
+  float: left;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  margin-left: 28%;
+  border-style: solid;
+  border-color: rgb(136, 167, 136);
+  border-width: 5px;
+  border-radius: 12px;
+  left: 15%;
+  padding: 3%;
+}
+
+h3 {
+  float: center;
+  font-weight: lighter;
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Sigmar One';
+  color: rgb(151, 186, 151);
+  margin-top: 0%;
+}
+
+.swinging {
+  float: right;
+  margin-right: 2%;
+}
+</style>
