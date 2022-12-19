@@ -25,7 +25,7 @@
 h2 {
     position: absolute;
     text-align: center;
-    top: 78%;
+    top: 74%;
     left: 50%;
     color: rgb(255, 255, 255);
     transform: translate(-50%, -50%);

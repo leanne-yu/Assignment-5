@@ -25,7 +25,8 @@ body {
 
 .header-container{
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  margin-left: 7%;
  
 }
 .title {

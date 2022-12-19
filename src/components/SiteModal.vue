@@ -18,14 +18,55 @@ console.log(data);
     <div class="modal-outer-container" @click.self="emits('toggleModal')">
       <div class="modal-inner-container">
         <button class="close-button" @click="emits('toggleModal')">X</button>
-        <img :src="`https://image.tmdb.org/t/p/w500/${movie.poster_path}`" />
-        <h1>{{ data.title }}</h1>
-      
+        
+        <div class="description">
+          
+        </div>
+
       </div>
     </div>
   </Teleport>
 </template>
  
 <style scoped>
+.modal-outer-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: #00000099;
+  z-index: 3;
+}
 
+.modal-outer-container .modal-inner-container {
+  background-color: ivory;
+  color: rgb(141, 187, 141);
+  width: clamp(300px, 100%, 900px);
+  height: 500px;
+  position: relative;
+  border: solid;
+  border-color: ivory;
+  border-radius: 2%;
+  text-align: center;
+}
+
+.modal-outer-container .modal-inner-container .close-button {
+  position: absolute;
+  right: 0px;
+  padding: 1rem;
+  border: none;
+  background: ivory;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: rgb(141, 187, 141);
+}
+
+.description {
+
+  font-size: 20px;
+}
 </style>

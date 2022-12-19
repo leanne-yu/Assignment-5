@@ -5,18 +5,10 @@ import SiteFooterVue from '../components/SiteFooter.vue';
 </script>
 
 <template>
-  <Suspense>
   <RouterViewVue/>
-  </Suspense>
-  <Suspense>
   <SiteHeaderVue/>
-  </Suspense>
-  <Suspense>
   <SiteHeroVue/>
-  </Suspense>
-  <Suspense>
   <SiteFooterVue/>
-  </Suspense>
 </template>
 
 <style>
