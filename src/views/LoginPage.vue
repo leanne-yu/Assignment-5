@@ -26,7 +26,7 @@ const login = () => {
       <br />
       <input type="submit" value="Login" />
       <div v-if="error" class="error">
-        <p>Incorrect username or password! Get out -> </p>
+        <h2>Incorrect username or password! Try Again.</h2>
       </div>
     </form>
   </div>
@@ -73,5 +73,9 @@ form input {
 .swinging {
   float: right;
   margin-right: 6%;
+}
+
+.error {
+  margin-top: 10%;
 }
 </style>

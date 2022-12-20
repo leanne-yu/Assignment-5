@@ -3,7 +3,7 @@
 
 <template>
     <div class="footerText">
-        <h1>copyright yada yada</h1>
+        <h1>© Shrek's Movie Shack Inc.</h1>
     </div>
 </template>
 

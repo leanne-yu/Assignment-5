@@ -18,11 +18,14 @@ console.log(data);
     <div class="modal-outer-container" @click.self="emits('toggleModal')">
       <div class="modal-inner-container">
         <button class="close-button" @click="emits('toggleModal')">X</button>
-        
+        <img class="modalPoster" :src="`https://image.tmdb.org/t/p/w500/${data.poster_path}`" width="250" height="375" alt="movie poster" />
         <div class="description">
-          
+          <h1>{{ data.title }}</h1>
+          <h3>{{ data.tagline }}</h3>
+          <h3>{{ data.release_date }}</h3>
+          <iframe width="100" height="100" id="trailer" :src="`https://www.youtube.com/embed/${data.videos.results[0].key}`" frameborder="0"
+            allowfullscreen></iframe>
         </div>
-
       </div>
     </div>
   </Teleport>
@@ -45,7 +48,7 @@ console.log(data);
 .modal-outer-container .modal-inner-container {
   background-color: ivory;
   color: rgb(141, 187, 141);
-  width: clamp(300px, 100%, 900px);
+  width: clamp(400px, 100%, 800px);
   height: 500px;
   position: relative;
   border: solid;
@@ -65,8 +68,16 @@ console.log(data);
   color: rgb(141, 187, 141);
 }
 
-.description {
+.close-button {
+  margin-top: 0%;
+}
 
+.description {
   font-size: 20px;
 }
+
+.modalPoster{
+  float: left;
+  padding: 3%;
+  }
 </style>
