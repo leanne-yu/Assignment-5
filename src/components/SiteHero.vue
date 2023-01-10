@@ -12,7 +12,7 @@
         <img src="https://i.imgur.com/eBEkqgn.jpg" width="625" height="500"/>
     </div>
 
-<h2>Shrek has the best movies, just for you! Subscribe for only $39.99 a month and join now and get 0 days FREE :D Sign up right here, right now.</h2>
+<h2 class="hero">Shrek has the best movies, just for you! Subscribe for only $39.99 a month and join now and get 0 days FREE :D Sign up right here, right now.</h2>
 </template>
 
 <style>
@@ -22,7 +22,7 @@
     margin: 0px;
 }
 
-h2 {
+.hero {
     position: absolute;
     text-align: center;
     top: 73%;

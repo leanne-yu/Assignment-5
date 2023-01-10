@@ -18,12 +18,12 @@ console.log(data);
     <div class="modal-outer-container" @click.self="emits('toggleModal')">
       <div class="modal-inner-container">
         <button class="close-button" @click="emits('toggleModal')">X</button>
-        <img class="modalPoster" :src="`https://image.tmdb.org/t/p/w500/${data.poster_path}`" width="250" height="375" alt="movie poster" />
+        <img class="modalPoster" :src="`https://image.tmdb.org/t/p/w500/${data.poster_path}`" width="275" height="425" alt="movie poster" />
         <div class="description">
           <h1>{{ data.title }}</h1>
           <h3>{{ data.tagline }}</h3>
           <h3>{{ data.release_date }}</h3>
-          <iframe width="100" height="100" id="trailer" :src="`https://www.youtube.com/embed/${data.videos.results[0].key}`" frameborder="0"
+          <iframe width="400" height="250" id="trailer" :src="`https://www.youtube.com/embed/${data.videos.results[0].key}`" frameborder="0"
             allowfullscreen></iframe>
         </div>
       </div>
@@ -49,7 +49,7 @@ console.log(data);
   background-color: ivory;
   color: rgb(141, 187, 141);
   width: clamp(400px, 100%, 800px);
-  height: 500px;
+  height: 475px;
   position: relative;
   border: solid;
   border-color: ivory;
@@ -73,11 +73,23 @@ console.log(data);
 }
 
 .description {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .modalPoster{
   float: left;
   padding: 3%;
   }
+
+h1 {
+  font-family: "Fredoka One";
+  font-size: 31px;
+  text-align: center;
+  margin-right: 6%;
+}
+
+#trailer {
+  margin-right: 2%;
+  margin-top: 1%;
+}
 </style>
