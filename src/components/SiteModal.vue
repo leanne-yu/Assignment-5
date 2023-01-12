@@ -1,15 +1,17 @@
 <script setup>
-import axios from 'axios';
+import axios from "axios";
 
 const props = defineProps(["id"]);
 const emits = defineEmits(["toggleModal"]);
 
-let data = (await axios.get(`https://api.themoviedb.org/3/movie/${props.id}`, {
-  params: {
-    api_key: "ab590dbfc1eb546b5263a30c390d2d07",
-    append_to_response: "videos",
-  }
-})).data;
+let data = (
+  await axios.get(`https://api.themoviedb.org/3/movie/${props.id}`, {
+    params: {
+      api_key: "ab590dbfc1eb546b5263a30c390d2d07",
+      append_to_response: "videos",
+    },
+  })
+).data;
 console.log(data);
 </script>
 
@@ -18,19 +20,33 @@ console.log(data);
     <div class="modal-outer-container" @click.self="emits('toggleModal')">
       <div class="modal-inner-container">
         <button class="close-button" @click="emits('toggleModal')">X</button>
-        <img class="modalPoster" :src="`https://image.tmdb.org/t/p/w500/${data.poster_path}`" width="275" height="425" alt="movie poster" />
-        <div class="description">
+        <img
+          class="modalPoster"
+          :src="`https://image.tmdb.org/t/p/w500/${data.poster_path}`"
+          width="275"
+          height="425"
+          alt="movie poster"
+        />
+        <div class="title">
           <h1>{{ data.title }}</h1>
+        </div>
+        <div class="description">
           <h3>{{ data.tagline }}</h3>
           <h3>{{ data.release_date }}</h3>
-          <iframe width="400" height="250" id="trailer" :src="`https://www.youtube.com/embed/${data.videos.results[0].key}`" frameborder="0"
-            allowfullscreen></iframe>
+          <iframe
+            width="350"
+            height="215"
+            id="trailer"
+            :src="`https://www.youtube.com/embed/${data.videos.results[0].key}`"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </div>
   </Teleport>
 </template>
- 
+
 <style scoped>
 .modal-outer-container {
   position: fixed;
@@ -73,23 +89,25 @@ console.log(data);
 }
 
 .description {
-  font-size: 25px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  margin-right: 6%;
 }
 
-.modalPoster{
+.modalPoster {
   float: left;
   padding: 3%;
-  }
+}
 
-h1 {
+.title {
   font-family: "Fredoka One";
-  font-size: 31px;
+  font-size: 18px;
   text-align: center;
   margin-right: 6%;
 }
 
 #trailer {
-  margin-right: 2%;
+  
   margin-top: 1%;
 }
 </style>

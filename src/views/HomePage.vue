@@ -5,7 +5,6 @@ import SiteFooterVue from '../components/SiteFooter.vue';
 </script>
 
 <template>
-  <RouterViewVue/>
   <SiteHeaderVue/>
   <SiteHeroVue/>
   <SiteFooterVue/>

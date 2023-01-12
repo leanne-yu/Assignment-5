@@ -44,7 +44,8 @@ console.log(data);
 .purchase-container>.poster {
   max-height: 42.5vh;
   max-width: 42.5vw;
-  margin: 2%;
+  margin-left: 4%;
+  margin-bottom: 2%;
   border: solid;
   border-width: 20%;
   border-radius: 4%;
