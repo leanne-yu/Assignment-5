@@ -1,7 +1,7 @@
 <script setup>
 import axios from 'axios';
 import { ref } from 'vue';
-import SiteHeaderVue from '../components/SiteHeader.vue';
+import SiteHeader from '../components/SiteHeader.vue';
 import SiteModal from '../components/SiteModal.vue';
 
 
@@ -26,7 +26,7 @@ console.log(data);
 </script>
 
 <template>
-  <SiteHeaderVue />
+  <SiteHeader />
   <div class="purchase-container">
     <img v-for="movie in data" @click="openModal(movie.id)" class="poster"
      :src="`https://image.tmdb.org/t/p/w500/${movie.poster_path}`" />

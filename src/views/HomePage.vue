@@ -1,13 +1,13 @@
 <script setup>
-import SiteHeaderVue from '../components/SiteHeader.vue';
-import SiteHeroVue from '../components/SiteHero.vue';
-import SiteFooterVue from '../components/SiteFooter.vue';
+import SiteHeader from '../components/SiteHeader.vue';
+import SiteHero from '../components/SiteHero.vue';
+import SiteFooter from '../components/SiteFooter.vue';
 </script>
 
 <template>
-  <SiteHeaderVue/>
-  <SiteHeroVue/>
-  <SiteFooterVue/>
+  <SiteHeader/>
+  <SiteHero/>
+  <SiteFooter/>
 </template>
 
 <style>
