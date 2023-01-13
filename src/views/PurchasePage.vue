@@ -22,7 +22,7 @@ let data = (await axios.get("https://api.themoviedb.org/3/trending/movie/week", 
     api_key: "ab590dbfc1eb546b5263a30c390d2d07",
   }
 })).data.results;
-console.log(data);
+
 </script>
 
 <template>

@@ -12,7 +12,7 @@ let data = (
     },
   })
 ).data;
-console.log(data);
+
 </script>
 
 <template>
